@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101820">
+  <meta name="description" content="QuantDinger 开源 AI 量化交易平台项目介绍与相关链接。">
+  <title>QuantDinger · 开源 AI 量化交易平台</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      font-family: Inter, "Segoe UI", "Microsoft YaHei", sans-serif;
+      background: #101820;
+      color: #edf3f7;
+      font-synthesis: none;
+      text-rendering: optimizeLegibility;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(ellipse at 75% 8%, rgba(44, 184, 142, .17), transparent 36rem),
+        #101820;
+    }
+    a { color: inherit; }
+    .wrap { width: min(1080px, calc(100% - 40px)); margin: 0 auto; }
+    header { padding: 26px 0; border-bottom: 1px solid #26343d; }
+    .brand { font-size: 18px; font-weight: 750; letter-spacing: .02em; }
+    .brand span { color: #4bd4a4; }
+    main { padding: 94px 0 76px; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: #87e8c5;
+      font-size: 13px;
+      font-weight: 650;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: #4bd4a4; }
+    h1 { max-width: 780px; margin: 22px 0; font-size: clamp(42px, 8vw, 76px); line-height: 1.04; letter-spacing: -.055em; }
+    h1 span { color: #64dbb0; }
+    .intro { max-width: 690px; color: #b6c4cc; font-size: 18px; line-height: 1.8; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 32px 0 72px; }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 19px;
+      border: 1px solid #3a4a53;
+      border-radius: 8px;
+      color: #eff8f4;
+      font-size: 14px;
+      font-weight: 650;
+      text-decoration: none;
+      transition: transform .15s ease, border-color .15s ease;
+    }
+    .button:hover { transform: translateY(-2px); border-color: #64dbb0; }
+    .button.primary { border-color: #4bd4a4; background: #4bd4a4; color: #0d201a; }
+    h2 { margin: 0 0 22px; font-size: 23px; letter-spacing: -.02em; }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .card { min-height: 170px; padding: 23px; border: 1px solid #2a3942; border-radius: 12px; background: rgba(24, 37, 46, .72); }
+    .card h3 { margin: 0 0 10px; font-size: 16px; }
+    .card p { margin: 0; color: #a8b8c1; font-size: 14px; line-height: 1.75; }
+    .notice { margin-top: 28px; padding: 18px 20px; border-left: 3px solid #e4b85e; border-radius: 4px; background: rgba(228, 184, 94, .08); color: #d8d4c8; font-size: 14px; line-height: 1.7; }
+    footer { padding: 24px 0 38px; border-top: 1px solid #26343d; color: #8798a2; font-size: 13px; line-height: 1.8; }
+    footer a { color: #9be8cd; }
+    @media (max-width: 700px) {
+      main { padding-top: 64px; }
+      .cards { grid-template-columns: 1fr; }
+      .card { min-height: auto; }
+      .actions { margin-bottom: 54px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap brand">Quant<span>Dinger</span></div>
+  </header>
+  <main class="wrap">
+    <div class="eyebrow"><span class="dot"></span>开源 AI 量化交易平台</div>
+    <h1>从交易想法，走向可验证的<span>策略。</span></h1>
+    <p class="intro">QuantDinger 是一个面向量化研究与交易的开源项目，涵盖市场研究、Python 策略开发、回测，以及模拟和实盘执行。你可以先访问官方在线应用体验，或查看源代码与自托管说明。</p>
+    <div class="actions">
+      <a class="button primary" href="https://ai.quantdinger.com/" target="_blank" rel="noopener noreferrer">访问官方在线应用 ↗</a>
+      <a class="button" href="https://github.com/OpenByteInc/QuantDinger" target="_blank" rel="noopener noreferrer">查看 GitHub 源码 ↗</a>
+      <a class="button" href="https://www.quantdinger.com/" target="_blank" rel="noopener noreferrer">访问项目官网 ↗</a>
+    </div>
+    <section aria-labelledby="features">
+      <h2 id="features">项目概览</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>研究与策略</h3>
+          <p>使用 Python 编写指标和策略，在统一工作流中研究想法并管理实验。</p>
+        </article>
+        <article class="card">
+          <h3>回测与执行</h3>
+          <p>通过历史回测和模拟交易验证策略；实盘交易需自行配置并谨慎启用。</p>
+        </article>
+        <article class="card">
+          <h3>自行部署</h3>
+          <p>完整服务包含后端及数据库等组件。请以官方仓库中的最新部署文档为准。</p>
+        </article>
+      </div>
+    </section>
+    <aside class="notice">这是个人制作的静态项目介绍页，不是 QuantDinger 官方网站，也不包含交易功能。GitHub Pages 只托管静态文件，不能运行 QuantDinger 的后端、数据库或交易任务。投资有风险；请先使用模拟交易，并保护好交易所 API 密钥。</aside>
+  </main>
+  <footer>
+    <div class="wrap">
+      本页面独立托管于 GitHub Pages。QuantDinger 项目及其商标归原权利人所有；源代码授权请查看
+      <a href="https://github.com/OpenByteInc/QuantDinger/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">官方仓库许可证</a>。
+    </div>
+  </footer>
+</body>
+</html>
